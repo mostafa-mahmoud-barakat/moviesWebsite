@@ -11,7 +11,7 @@ export default async function SearchPage({params}) {
       const results = data.results;
   return (
     <div>
-        {results & results.length ===  (
+        {results && results.length ===  (
             <h1 className='text-center pt-6'>No results found</h1>
         )}
         {

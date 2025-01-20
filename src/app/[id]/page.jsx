@@ -2,12 +2,11 @@ import Image from 'next/image';
 import React from 'react'
 
 export default async function MoviePage({ params }) {
-    const movieId =  params.id;
-		console.log("Params:", params); // Check the params object in the console
+    // const movieId =  params.id;
+	const { id: movieId } =await params; 
+    console.log("Paramsid:", movieId); // Check the params object in the console
 
-    const res = await fetch(
-        `http://api.themoviedb.org/3/movie/${movieId}?api_key=${process.env.API_KEY}`,
-      );
+    const res = await fetch(`https://api.themoviedb.org/3/movie/${movieId}?api_key=${process.env.API_KEY}`);
       const movie = await res.json();
       
 			return (

@@ -13,7 +13,7 @@ import Results from "@/components/Results";
     throw new Error('Failed to fetch data')
   }
   const results = data.results;
-  
+ 
  
    return (
      <div>
